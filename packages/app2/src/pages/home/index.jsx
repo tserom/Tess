@@ -4,23 +4,19 @@ import { useNavigate } from "react-router-dom";
 
 import Theme from "../../components/Theme";
 import "./index.less";
-import { queryThemeApi } from "../../apis/queryTheme";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const [themeStyle, setThemeStyle] = useState({});
-
   const OnClick = async () => {
-    const res = await queryThemeApi();
-    setThemeStyle(res);
+    navigate("/about");
   };
 
   return (
     <div>
       home
       <button onClick={OnClick}>about</button>
-      <Theme style={themeStyle}>
+      <Theme>
         <div className="classname1">as</div>
         <div className="classname2">as</div>
         <div className="default-theme">as</div>

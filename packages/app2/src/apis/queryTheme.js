@@ -1,3 +1,4 @@
 export const queryThemeApi = async () => {
-  return { background: "green", color: "blue" };
+  const data = { background: "green", color: "blue" };
+  return { code: 200, data };
 };
